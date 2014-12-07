@@ -2,7 +2,7 @@ package templates.utils;
 
 /**
  * Type of parsing process
- * @author Ivan
+ * @author Ivan Martos
  *
  */
 public enum ParsingType {

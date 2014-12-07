@@ -47,7 +47,12 @@ public class MyPageCallbackHandler implements PageCallbackHandler, ParsingFinish
 	
 	public MyPageCallbackHandler(String templatesFile, ParsingType parsingType, boolean storeTemplate) throws FileNotFoundException, JAXBException{
 		// Set-up a simple wiki configuration
-		config = new SimpleWikiConfiguration("classpath:/org/sweble/wikitext/engine/SimpleWikiConfiguration.xml");
+		try {
+			config = new SimpleWikiConfiguration("classpath:/org/sweble/wikitext/engine/SimpleWikiConfiguration.xml");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		// Instantiate a compiler for wiki pages
 		compiler = new Compiler(config);
 		wrapCol = 80;

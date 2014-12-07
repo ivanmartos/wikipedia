@@ -10,7 +10,7 @@ import templates.utils.ParsingType;
  */
 
 /**
- * @author Ivan
+ * @author Ivan Marts
  *
  */
 public class Main {
@@ -36,18 +36,17 @@ public class Main {
 		String templateFile = null;
 		//String templateFile = "templateDefaultBackup.xml";
 		//String templateFile = "templates.xml";
+		//String templateFile = "templates_new.xml";
 		String fileName;
 		
 		//fileName = "enwiki-latest-pages-articles.xml";
 		fileName = "enwiki-latest-pages-articles1.xml";
 		//fileName = "enwiki-latest-pages-articles1_origin.xml";
 		
-		/*
 		if (args.length < 1) {
 			printHelp();
 			return;
 		}
-		*/
 		
 		int argsCounter = 0;
 		while (argsCounter != (args.length)) {

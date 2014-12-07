@@ -13,9 +13,19 @@ import org.xml.sax.SAXException;
 
 import templates.Main;
 
+/**
+ * Class from loading templates from file
+ * @author Ivan Martos
+ *
+ */
 public class TemplatesLoadUtils {
 	private final static Logger log = Logger.getLogger(TemplatesLoadUtils.class.getName());
 	
+	/**
+	 * Parse input file, retrieve templates stored inside file and return them as HashMap
+	 * @param templatesFile - source of templates
+	 * @return hashMap of tempaltes. Key - templateName. Value -templateBody
+	 */
 	public static HashMap<String, String> getTemplatesMap(String templatesFile){
 		if(Main.DEBUG) log.info("Loading templates from - " + templatesFile);
 		try {

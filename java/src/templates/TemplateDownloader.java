@@ -13,11 +13,19 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.xml.sax.SAXException;
 
-//trieda na stahovanie sablon z internetu
+/**
+ * Class for downloading templates from Internet
+ * @author Ivan Martos -  inspired by provided resources
+ *
+ */
 public class TemplateDownloader {
 	private static final boolean DEBUG = true;
 	
-	//stiahne sa sablona s nazvom templateName
+	/**
+	 * Method for downloading template from internet
+	 * @param templateName 
+	 * @return Template body
+	 */
 	public static String download(String templateName){
 		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		DocumentBuilder db;	

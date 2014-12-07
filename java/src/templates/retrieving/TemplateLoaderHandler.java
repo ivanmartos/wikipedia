@@ -8,7 +8,7 @@ import org.xml.sax.helpers.DefaultHandler;
 
 /**
  * Custom DefaulHandler for parsing specific xml that stores parsed templates
- * @author Ivan
+ * @author Ivan Martos
  *
  */
 public class TemplateLoaderHandler extends DefaultHandler{

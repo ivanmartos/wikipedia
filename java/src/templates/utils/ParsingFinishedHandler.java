@@ -2,7 +2,7 @@ package templates.utils;
 
 /**
  * Handler for providing callback when parsing is finished
- * @author Ivan
+ * @author Ivan Martos
  *
  */
 public interface ParsingFinishedHandler {

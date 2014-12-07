@@ -15,12 +15,17 @@ import templates.Main;
 /**
  * Class for extracting templates from Wiki DUMP
  * 
- * @author Ivan
+ * @author Ivan Martos
  */
 public class TemplateDumpExtractor {
 	private static final boolean DEBUG_TEMPLATE = true;
 	private final static Logger log = Logger.getLogger(TemplateDumpExtractor.class.getName());
 
+	/**
+	 * HashMap used for storing retrieved templates
+	 * Key - template name
+	 * Value - template body
+	 */
 	private HashMap<String, String> templates;
 	
 	/**

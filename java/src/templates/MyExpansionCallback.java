@@ -1,27 +1,15 @@
 package templates;
-import java.io.File;
-import java.io.IOException;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.logging.Logger;
-
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
 
 import org.sweble.wikitext.engine.ExpansionCallback;
 import org.sweble.wikitext.engine.ExpansionFrame;
 import org.sweble.wikitext.engine.FullPage;
 import org.sweble.wikitext.engine.PageId;
 import org.sweble.wikitext.engine.PageTitle;
-import org.xml.sax.Attributes;
-import org.xml.sax.SAXException;
-import org.xml.sax.helpers.DefaultHandler;
 
-import templates.retrieving.TemplateLoaderHandler;
 import templates.retrieving.TemplatesLoadUtils;
 import templates.utils.TemplatesMapRetriever;
-import de.fau.cs.osr.ptk.common.ast.AstNode;
 
 /**
  * Used for Sweable project.
@@ -79,6 +67,9 @@ public class MyExpansionCallback implements ExpansionCallback, TemplatesMapRetri
 				
 			}
 		}
+		else {
+			return null;
+		}
 		if(article == null){
 			if(Main.DEBUG) log.warning("No article found, trying to get parsed content");
 			article = TemplateDownloader.getWikiMediaProcessedTemplate("{{" + title + "}}");
@@ -89,7 +80,8 @@ public class MyExpansionCallback implements ExpansionCallback, TemplatesMapRetri
 			}
 			else{
 				if(Main.DEBUG) log.warning("No article found, returning null");
-				article = "<div class=\"hatnote relarticle mainarticle\">NULL</div>";
+				templateMap.put(title, "");
+				//article = "<div class=\"hatnote relarticle mainarticle\">NULL</div>";
 				//return null;
 			}
 		}

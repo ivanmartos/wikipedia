@@ -14,7 +14,7 @@ import templates.utils.TemplatesMapRetriever;
 /**
  * Class for storing templates HashMap into XML file
  * 
- * @author Ivan - from provided sources
+ * @author Ivan Martos - from provided sources
  */
 public class XMLCreator {
 	
